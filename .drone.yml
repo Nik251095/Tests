@@ -1,17 +1,12 @@
-pipeline:
-  run-tests:
-    image: node:6.2.9
-    commands:
-      - cd ./api && npm i --quiet
-      - npm test
-
-  publish-api-docker:
-    image: plugins/docker:1.12
-    username: ${DOCKER_USERNAME}
-    password: ${DOCKER_PASSWORD}
-    email: ${DOCKER_EMAIL}
-    repo: anorsich/ds-api
-    tags:
-      - latest
-    dockerfile: ./api/Dockerfile
-    context: ./api/
+kind: pipeline
+type: kubernetes
+name: default
+steps:
+- name: step1
+  image: alpine
+  commands:
+  - echo "step 1"
+- name: step2
+  image: alpine
+  commands:
+  - echo "step 2"
