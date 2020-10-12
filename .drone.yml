@@ -4,10 +4,10 @@ name: default
 
 steps: 
 - name: step1
-  image: alpine
+  image: docker
   commands:
   - echo "step 1"
 - name: step2
-  image: alpine
+  image: docker
   commands:
   - echo "step 2"
