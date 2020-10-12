@@ -4,7 +4,7 @@ name: default
 
 steps: 
 - name: step1
-  image: docker.com/library/docker
+  image: library/docker
   commands:
   - echo "step 1"
 - name: step2
