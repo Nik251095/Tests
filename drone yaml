@@ -1,7 +1,7 @@
 kind: pipeline
 type: kubernetes
 name: default
-
+1
 steps: 
 - name: step1
   image: alpine
