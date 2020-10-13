@@ -1,13 +1,11 @@
+---
 kind: pipeline
 type: kubernetes
 name: default
 
-steps: 
-- name: step1
-  image: library/docker
+steps:
+- name: greeting
+  image: golang:1.12
   commands:
-  - echo "step 1"
-- name: step2
-  image: docker
-  commands:
-  - echo "step 2"
+  - go build
+  - go test
